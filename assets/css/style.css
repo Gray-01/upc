@@ -1,0 +1,321 @@
+.container {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+body {
+    background-color: #fdfdf0;
+    color: #333;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body,
+p {
+    font-family: Lato, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    color: #111;
+}
+
+h1 {
+    font-size: 2.5rem;
+
+    /* ~40px */
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+
+    /* ~32px */
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+
+    /* ~24px */
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.25rem;
+
+    /* ~20px */
+    font-weight: 400;
+}
+
+/* start_verstki */
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.875rem 0;
+    font-family: Lato, sans-serif;
+    font-weight: 600;
+}
+
+ul.nav__list {
+    display: flex;
+    gap: 0 2.5rem;
+}
+
+.nav__link {
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0E0D0D;
+    transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+.nav__link:hover {
+    color: #9ec976;
+}
+
+.header__contacts {
+    text-transform: uppercase;
+    padding: 0.625rem 2.5rem;
+    display: inline-block;
+    background-color: #0E0D0D;
+    color: #fff;
+    border-radius: 3.125rem;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header__contacts:hover {
+    background-color: #9ec976;
+}
+
+h1.hero__title {
+    text-align: center;
+    margin-bottom: 3.125rem;
+}
+
+p.hero__text {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* меню бургер */
+.header__nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Выпадающее меню */
+.burger-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    padding: 4rem 1rem 2rem;
+    z-index: 1000;
+}
+
+.burger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu li {
+    margin-bottom: 1.25rem;
+}
+
+.burger-menu a {
+    color: #0E0D0D;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.burger-menu.active {
+    left: 0;
+}
+
+/* Иконка бургер */
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1100;
+    /* чтобы была сверху меню */
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #F3AB00;
+    /* твой цвет */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Крестик закрытия */
+.burger-menu__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #0E0D0D;
+}
+
+/* Пункты меню */
+.burger-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.burger-menu li a:hover {
+    background-color: #9ec976;
+}
+
+/* start modal window */
+/* Модальное окно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    /* скрыто по умолчанию */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal__content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #0E0D0D;
+}
+
+.modal__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal__list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal__city {
+    font-weight: 600;
+    color: #9ec976;
+    /* другой цвет для названия города */
+}
+
+.modal__btn {
+    background-color: #0E0D0D;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3.125rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.modal__btn:hover {
+    background-color: #9ec976;
+}
