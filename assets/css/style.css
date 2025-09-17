@@ -153,6 +153,10 @@ ul.nav__list {
     background-color: #9ec976;
 }
 
+.hero {
+    margin-bottom: 3.75rem;
+}
+
 h1.hero__title {
     text-align: center;
     margin-bottom: 3.125rem;
@@ -329,4 +333,44 @@ p.hero__text {
 
 .modal__btn:hover {
     background-color: #9ec976;
+}
+
+/* 20250917_start  section schedule*/
+h2.schedule__title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.schedule__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 75rem;
+    align-items: center;
+    gap: 2.8125rem;
+    margin-bottom: 2.5rem;
+}
+
+.schedule__item {
+    display: flex;
+    align-items: center;
+    gap: 13.125rem;
+}
+
+.schedule__datetime {
+    display: flex;
+    flex-direction: column;
+    min-width: 5rem;
+    /* фиксируем ширину блока */
+    text-align: center;
+}
+
+.schedule__day {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.schedule__event::first-letter,
+.schedule__place::first-letter,
+.schedule__day::first-letter {
+    text-transform: uppercase;
 }
