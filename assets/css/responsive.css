@@ -1,0 +1,9 @@
+@media (max-width: 1149px) {
+    .header__nav {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}

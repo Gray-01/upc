@@ -215,3 +215,129 @@ body {
 }
 
 /* start burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #D0A930;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.burger:hover span {
+    background-color: #BC8C12;
+}
+
+/* mobile menu */
+/* Мобильное меню скрыто по умолчанию */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* уезжает за экран */
+    width: 260px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+    /* отступ под бургер */
+}
+
+.mobile-menu.active {
+    left: 0;
+    /* появляется */
+}
+
+.mobile-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu__list li {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.mobile-menu__list a {
+    display: block;
+    padding: 15px 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1B365D;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu__list a:hover {
+    background-color: #EAEAEA;
+    color: #BC8C12;
+}
+
+/* start submenu */
+/* Сабменю по умолчанию скрыто */
+.submenu {
+    display: none;
+    padding-left: 15px;
+    background-color: #f9f9f9;
+}
+
+.submenu li {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.submenu a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: #1B365D;
+}
+
+.submenu a:hover {
+    color: #BC8C12;
+}
+
+/* Стрелка */
+.has-submenu>a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 10px;
+    border: solid #1B365D;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(-45deg);
+    /* ► */
+    transition: transform 0.3s ease;
+}
+
+/* Когда активно */
+.has-submenu.open>a .arrow {
+    transform: rotate(45deg);
+    /* ▼ */
+}
+
+.has-submenu.open>.submenu {
+    display: block;
+}
