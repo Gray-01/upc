@@ -1,3 +1,4 @@
+/* Контейнер */
 .container {
     max-width: 1260px;
     width: 100%;
@@ -5,6 +6,7 @@
     padding: 0 10px;
 }
 
+/* Базовые стили body */
 body {
     background-color: #fdfdf0;
     color: #333;
@@ -16,290 +18,169 @@ body {
     padding: 0;
 }
 
+/* Баннер */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* на весь экран */
+    overflow: hidden;
+}
 
-
-img {
-    max-width: 100%;
-    height: auto;
+.hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* изображение заполняет блок без искажения */
     display: block;
-    border-radius: 1rem;
 }
 
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+/* Контент баннера (заголовок, подзаголовок, кнопка) */
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    padding: 0 20px;
 }
 
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url('../fonts/Lato-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: Lato;
-    src: url('../fonts/Lato-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-body,
-p {
-    font-family: Lato, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4 {
+.hero__title {
     font-family: 'Playfair Display', serif;
-    margin: 0 0 1rem;
-    line-height: 1.2;
-    color: #111;
-}
-
-h1 {
-    font-size: 2.5rem;
-
-    /* ~40px */
+    font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-    font-size: 2rem;
-
-    /* ~32px */
-    font-weight: 600;
-}
-
-h3 {
-    font-size: 1.5rem;
-
-    /* ~24px */
-    font-weight: 400;
-}
-
-h4 {
-    font-size: 1.25rem;
-
-    /* ~20px */
-    font-weight: 400;
-}
-
-/* start_verstki */
-.header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.875rem 0;
+.hero__subtitle {
     font-family: Lato, sans-serif;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-ul.nav__list {
+/* Кнопка "Наші храми" */
+.hero__contacts {
+    display: inline-block;
+    background-color: #D0A930;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero__contacts:hover {
+    background-color: #BC8C12;
+    transform: scale(1.05);
+}
+
+/* ====== NAVIGATION ====== */
+.nav__list {
     display: flex;
-    gap: 0 2.5rem;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 10px;
+    border-bottom: 2px solid #EAEAEA;
+}
+
+.nav__item {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    position: relative;
 }
 
 .nav__link {
-    text-transform: uppercase;
-    position: relative;
-    transition: color 0.3s ease;
-    cursor: pointer;
-}
-
-.nav__link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #0E0D0D;
-    transition: width 0.3s ease;
-}
-
-.nav__link:hover::after {
-    width: 100%;
+    display: block;
+    padding: 0.75rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: #1B365D;
 }
 
 .nav__link:hover {
-    color: #9ec976;
+    background-color: #EAEAEA;
+    font-weight: 700;
+    color: #BC8C12;
 }
 
-.header__contacts {
-    text-transform: uppercase;
-    padding: 0.625rem 2.5rem;
-    display: inline-block;
-    background-color: #0E0D0D;
-    color: #fff;
-    border-radius: 3.125rem;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.header__contacts:hover {
-    background-color: #9ec976;
-}
-
-.hero {
-    margin-bottom: 3.75rem;
-}
-
-h1.hero__title {
-    text-align: center;
-    margin-bottom: 3.125rem;
-}
-
-p.hero__text {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.hero__banner--img {
-    display: block;
-    margin: 0 auto;
-    max-width: 1058px;
-    /* реальный размер баннера */
-    width: 100%;
-    /* сжимается при уменьшении экрана */
-    height: auto;
-}
-
-
-/* меню бургер */
-.header__nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-/* Выпадающее меню */
-.burger-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 250px;
-    height: 100%;
-    background: #fff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease;
-    padding: 4rem 1rem 2rem;
+/* Подменю */
+.nav__submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-}
-
-.burger-menu ul {
-    list-style: none;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
-.burger-menu li {
-    margin-bottom: 1.25rem;
-}
-
-.burger-menu a {
-    color: #0E0D0D;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.burger-menu.active {
-    left: 0;
-}
-
-/* Иконка бургер */
-.burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    z-index: 1100;
-    /* чтобы была сверху меню */
-}
-
-.burger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #F3AB00;
-    /* твой цвет */
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Крестик закрытия */
-.burger-menu__close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: #0E0D0D;
-}
-
-/* Пункты меню */
-.burger-menu li a {
+.nav__submenu li a {
     display: block;
     padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
 }
 
-.burger-menu li a:hover {
-    background-color: #9ec976;
+.nav__submenu li a:hover {
+    background-color: #EAEAEA;
+    font-weight: 700;
 }
 
-/* start modal window */
-/* Модальное окно */
+.nav__has-submenu:hover .nav__submenu {
+    display: block;
+}
+
+/* ====== MODAL ====== */
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     display: none;
-    /* скрыто по умолчанию */
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
     justify-content: center;
     align-items: center;
-    z-index: 2000;
 }
 
 .modal__content {
-    background-color: #fff;
+    background: #fff;
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 8px;
+    max-width: 600px;
     width: 90%;
-    max-width: 500px;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal__title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #1B365D;
+    text-align: center;
 }
 
 .modal__close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #1B365D;
     cursor: pointer;
-    color: #0E0D0D;
 }
 
 .modal__list {
@@ -312,65 +193,25 @@ p.hero__text {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
 }
 
 .modal__city {
     font-weight: 600;
-    color: #9ec976;
-    /* другой цвет для названия города */
+    color: #1B365D;
 }
 
 .modal__btn {
-    background-color: #0E0D0D;
+    background-color: #D0A930;
     color: #fff;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
     text-decoration: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 3.125rem;
-    font-weight: 600;
+    font-size: 0.9rem;
     transition: background-color 0.3s ease;
 }
 
 .modal__btn:hover {
-    background-color: #9ec976;
-}
-
-/* 20250917_start  section schedule*/
-h2.schedule__title {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.schedule__list {
-    display: flex;
-    flex-direction: column;
-    max-width: 75rem;
-    align-items: center;
-    gap: 2.8125rem;
-    margin-bottom: 2.5rem;
-}
-
-.schedule__item {
-    display: flex;
-    align-items: center;
-    gap: 13.125rem;
-}
-
-.schedule__datetime {
-    display: flex;
-    flex-direction: column;
-    min-width: 5rem;
-    /* фиксируем ширину блока */
-    text-align: center;
-}
-
-.schedule__day {
-    font-size: 0.875rem;
-    color: #555;
-}
-
-.schedule__event::first-letter,
-.schedule__place::first-letter,
-.schedule__day::first-letter {
-    text-transform: uppercase;
+    background-color: #BC8C12;
 }

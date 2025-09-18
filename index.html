@@ -15,238 +15,102 @@
   <header class="header">
     <div class="header__wrapper">
 
-      <div class="container">
-        <div class="header__inner">
+      <div class="header__inner">
 
-          <div class="burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="burger-menu" id="burgerMenu">
-            <div class="burger-menu__close" id="burgerClose">&times;</div>
-            <ul>
-              <li><a href="#">Загальні</a></li>
-              <li><a href="#">Недільна школа</a></li>
-              <li><a href="#">Молитви</a></li>
-              <li><a href="#">Замовлення</a></li>
-              <li><a href="#">Корисні посилання</a></li>
-              <li><a href="#">Пожертвування</a></li>
-              <li><a href="#">Ще пункт</a></li>
-            </ul>
-          </div>
-
-          <nav class="header__nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="#">Головна</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Громада</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Молитви</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Замовлення</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Kонтакти</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Пожертвування</a></li>
-            </ul>
-          </nav>
-
-          <a class="header__contacts" href="#">Детальніше</a>
-
-          <!-- Модальное окно -->
-          <div class="modal" id="modalInfo">
-            <div class="modal__content">
-              <div class="modal__close" id="modalClose">&times;</div>
-              <ul class="modal__list">
-                <li>
-                  <span class="modal__city">м. Берн</span>
-                  <a href="https://maps.app.goo.gl/JmonunSstCQb2FVr7" target="_blank" class="modal__btn">Подивитися на
-                    карті</a>
-                </li>
-                <li>
-                  <span class="modal__city">м. Фрібург</span>
-                  <a href="https://maps.app.goo.gl/qmQMdpXiHqVzvtvM7" target="_blank" class="modal__btn">Подивитися на
-                    карті</a>
-                </li>
-                <li>
-                  <span class="modal__city">м. Біль</span>
-                  <a href="https://maps.app.goo.gl/8g7K2CtbK6m3f5V47" target="_blank" class="modal__btn">Подивитися на
-                    карті</a>
-                </li>
-                <li>
-                  <span class="modal__city">м. Тун</span>
-                  <a href="https://maps.app.goo.gl/iXwW9WTH2CvLQxs76" target="_blank" class="modal__btn">Подивитися на
-                    карті</a>
-                </li>
-                <li>
-                  <span class="modal__city">м. Невшатель</span>
-                  <a href="https://maps.app.goo.gl/iUKzQMLMcEsmEw1FA" target="_blank" class="modal__btn">Подивитися на
-                    карті</a>
-                </li>
+        <nav class="header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Головна</a>
+            </li>
+            <li class="nav__item nav__has-submenu">
+              <a class="nav__link" href="#">Послуги ▼</a>
+              <ul class="nav__submenu">
+                <li><a class="nav__link" href="#">Читання Псалтирі та Акафістів</a></li>
+                <li><a class="nav__link" href="#">Замовлення треб та поминань</a></li>
               </ul>
-            </div>
-          </div>
+            </li>
+            <li class="nav__item nav__has-submenu">
+              <a class="nav__link" href="#">Наша парафія ▼</a>
+              <ul class="nav__submenu">
+                <li><a class="nav__link" href="#">Про парафію</a></li>
+                <li><a class="nav__link" href="#">Духовенство парафії</a></li>
+                <li><a class="nav__link" href="#">Підтримка парафії</a></li>
+                <li><a class="nav__link" href="#">Покровитель парафії</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Розклад</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Паломництва</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Молодь</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Пожертвування</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Новини</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Контакти</a></li>
+          </ul>
 
-        </div>
+        </nav>
+
       </div>
 
     </div>
   </header>
 
   <main class="main">
-    <div class="container">
-      <section class="hero">
 
-        <h1 class="hero__title">ВАС ВІТАЄ ГРОМАДА УПЦ У ШВЕЙЦАРІЇ!</h1>
-        <p class="hero__text">ПАРАФІЯ НА ЧЕСТЬ СВВ. ЖІНОК-МИРОНОСИЦЬ</p>
-        <div class="hero__banner">
-          <img class="hero__banner--img" src="assets/images/baner.png" alt="baner">
+    <section class="hero">
+
+      <img class="hero__img" src="assets/images/baner.png" alt="banner">
+
+      <div class="hero__content">
+        <h1 class="hero__title">ВАС ВІТАЄ ГРОМАДА УПЦ У ШВЕЙЦАРІЇ !</h1>
+        <p class="hero__subtitle">ПАРАФІЯ НА ЧЕСТЬ СВВ. ЖІНОК-МИРОНОСИЦЬ</p>
+        <a class="hero__contacts" id="openModal" href="#">Наші храми</a>
+      </div>
+
+      <!-- modal window start -->
+      <div class="modal" id="modalInfo">
+        <div class="modal__content">
+          <button class="modal__close" id="modalClose">&times;</button>
+          <h2 class="modal__title">Наші храми</h2>
+          <ul class="modal__list">
+            <li>
+              <span class="modal__city">Bern</span>
+              <a href="https://maps.app.goo.gl/JmonunSstCQb2FVr7" target="_blank" class="modal__btn">Подивитися на
+                карті</a>
+            </li>
+            <li>
+              <span class="modal__city">Fribourg</span>
+              <a href="https://maps.app.goo.gl/qmQMdpXiHqVzvtvM7" target="_blank" class="modal__btn">Подивитися на
+                карті</a>
+            </li>
+            <li>
+              <span class="modal__city">Biel</span>
+              <a href="https://maps.app.goo.gl/8g7K2CtbK6m3f5V47" target="_blank" class="modal__btn">Подивитися на
+                карті</a>
+            </li>
+            <li>
+              <span class="modal__city">Thun</span>
+              <a href="https://maps.app.goo.gl/iXwW9WTH2CvLQxs76" target="_blank" class="modal__btn">Подивитися на
+                карті</a>
+            </li>
+            <li>
+              <span class="modal__city">Neuchâtel</span>
+              <a href="https://maps.app.goo.gl/iUKzQMLMcEsmEw1FA" target="_blank" class="modal__btn">Подивитися на
+                карті</a>
+            </li>
+          </ul>
         </div>
+      </div>
+      <!-- modal window end -->
 
-      </section>
+    </section>
 
-      <section class="schedule">
-
-        <div class="container">
-          <div class="schedule__wraper">
-            <h2 class="schedule__title">Розклад Богослужінь</h2>
-
-            <ul class="schedule__list">
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-              <li class="schedule__item">
-                <div class="schedule__datetime">
-                  <time class="schedule__date">2 квітня</time>
-                  <time class="schedule__day">неділя</time>
-                </div>
-                <span class="schedule__event">читання великого канону</span>
-                <span class="schedule__time">10:00</span>
-                <span class="schedule__place">Берн, Швейцария</span>
-              </li>
-
-            </ul>
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-    </div>
   </main>
 
   <footer class="footer">
     <div class="footer__wrapper">
-
+      <!-- футер можно заполнить позже -->
     </div>
   </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
 
