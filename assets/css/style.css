@@ -647,3 +647,68 @@ h2.schedule__title {
     background-color: #BC8C12;
     color: #fff;
 }
+
+/* contacts start */
+.contacts {
+    background-color: #F8F9FA;
+    padding: 3rem 1rem;
+}
+
+.contacts__title {
+    text-align: center;
+    color: #1B365D;
+    margin-bottom: 2rem;
+}
+
+.contacts__blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contacts__block {
+    flex: 1 1 250px;
+    /* минимальная ширина 250px, адаптивно */
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacts__block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.contacts__block-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #D0A930;
+    margin-bottom: 0.5rem;
+}
+
+.contacts__name,
+.contacts__phone,
+.contacts__messengers,
+.contacts__social,
+.contacts__schedule {
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+.contacts__social a {
+    color: #1B365D;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contacts__social a:hover {
+    color: #BC8C12;
+}
