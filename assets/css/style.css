@@ -712,3 +712,66 @@ h2.schedule__title {
 .contacts__social a:hover {
     color: #BC8C12;
 }
+
+/* footer start */
+.footer {
+    background-color: #1B365D;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 75rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.footer__left {
+    max-width: 60%;
+}
+
+.footer__title {
+    color: #D0A930;
+    margin: 0 0 0.5rem 0;
+}
+
+.footer__subtitle {
+    margin: 0;
+}
+
+.footer__right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.footer__contact {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer__icon svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+}
+
+.footer__icon:hover svg {
+    fill: #BC8C12;
+}
+
+.footer__bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
