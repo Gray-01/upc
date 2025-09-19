@@ -423,6 +423,7 @@ h1.hero__title {
 /* 20250919 section news start */
 .news {
     background-color: #F8F9FA;
+    margin-bottom: 2.5rem;
 }
 
 h1.news__title {
@@ -470,4 +471,70 @@ h2.news__subtitle {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+/* section schedule start */
+
+h2.schedule__title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 0 0.625rem;
+}
+
+/* список */
+.schedule__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 75rem;
+    width: 100%;
+    /* margin: 0 auto 2.5rem; */
+    margin: 0 auto;
+    padding: 0 10px;
+    gap: 2.5rem;
+    box-sizing: border-box;
+}
+
+/* элемент списка */
+.schedule__item {
+    display: grid;
+    grid-template-columns: minmax(80px, 1fr) 2fr minmax(60px, 1fr) minmax(120px, 1fr);
+    align-items: start;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #D0A930;
+    /*фон секции */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* блок даты */
+.schedule__datetime {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.schedule__day {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+/* событие */
+.schedule__event {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* время и место */
+.schedule__time,
+.schedule__place {
+    text-align-last: left;
+}
+
+/* капитализация первых букв */
+.schedule__event::first-letter,
+.schedule__place::first-letter,
+.schedule__day::first-letter {
+    text-transform: uppercase;
 }
