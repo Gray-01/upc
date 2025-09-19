@@ -60,6 +60,29 @@
     }
 }
 
+
+@media (max-width: 502px) {
+    .schedule__item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .schedule__datetime {
+        text-align: left;
+    }
+
+    .schedule__time,
+    .schedule__place {
+        text-align: left;
+    }
+
+    .schedule__event {
+        margin-top: 0.25rem;
+    }
+}
+
 @media (max-width: 507px) {
     .hero__title {
         font-size: 1.125rem;
