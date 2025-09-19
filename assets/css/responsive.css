@@ -54,6 +54,10 @@
         font-size: 1.25rem;
     }
 
+    .hero__contacts {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9375rem;
+    }
 }
 
 @media (max-width: 507px) {
@@ -87,5 +91,13 @@
 
     .modal__btn {
         font-size: 0.4375rem;
+    }
+
+    h1.news__title {
+        font-size: 1.875rem;
+    }
+
+    h2.news__subtitle {
+        font-size: 1.5625rem;
     }
 }
