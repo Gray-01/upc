@@ -580,6 +580,12 @@ h2.schedule__title {
     padding: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     gap: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement__item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 .announcement__img {
@@ -616,4 +622,28 @@ h2.schedule__title {
 
 .announcement__link:hover {
     color: #BC8C12;
+}
+
+/* кнопка старт */
+
+.announcements__actions {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.announcements__button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f8f9fa;
+    color: #333;
+    border: 2px solid #BC8C12;
+    /* border-radius: 8px; */
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.announcements__button:hover {
+    background-color: #BC8C12;
+    color: #fff;
 }
