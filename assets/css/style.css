@@ -17,10 +17,88 @@ body {
     padding: 0;
 }
 
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body,
+p {
+    font-family: Lato, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    color: #111;
+}
+
+h1 {
+    font-size: 2.5rem;
+
+    /* ~40px */
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+
+    /* ~32px */
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+
+    /* ~24px */
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.25rem;
+
+    /* ~20px */
+    font-weight: 400;
+}
+
+
 /* ====== HERO ====== */
 .hero {
     width: 100%;
     position: relative;
+    margin-bottom: 3.75rem;
+}
+
+h1.hero__title {
+    color: #fff;
 }
 
 .hero__img {
@@ -340,4 +418,56 @@ body {
 
 .has-submenu.open>.submenu {
     display: block;
+}
+
+/* 20250919 section news start */
+.news {
+    background-color: #F8F9FA;
+}
+
+h1.news__title {
+    text-align: center;
+    color: #1B365D;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+h2.news__subtitle {
+    text-align: center;
+    color: #D0A930;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.news__wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news__text {
+    margin-bottom: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.news__text:last-child {
+    margin-bottom: 0;
+}
+
+
+.news__highlight {
+    font-weight: 600;
+    margin: 2em 0 1.2em;
+    display: block;
+}
+
+.news__image-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.news__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
