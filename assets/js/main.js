@@ -93,3 +93,25 @@ if (openGallery && galleryModal) {
     }
   });
 }
+
+// 20250929 start анимация секций
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.15 } // 15% секции видно → включаем анимацию
+  );
+
+  sections.forEach((sec) => {
+    sec.classList.add("section-animate");
+    observer.observe(sec);
+  });
+});
+

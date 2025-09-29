@@ -920,3 +920,17 @@ h2.schedule__title {
 .gallery__next {
     right: -60px;
 }
+
+/* 20250929 start анимация секций */
+/* изначально секции чуть прозрачные и сдвинуты */
+.section-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+/* активная секция плавно проявляется */
+.section-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
