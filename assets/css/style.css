@@ -314,30 +314,40 @@ h1.hero__title {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: none;
+    width: 36px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.55);
     border: none;
-    padding: 0;
+    padding: 6px;
     cursor: pointer;
     position: absolute;
     top: 15px;
     left: 15px;
     z-index: 1001;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.burger:hover {
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .burger span {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: #D0A930;
+    background-color: #fff;
+    /* белые полоски */
     border-radius: 2px;
     transition: background-color 0.3s ease;
 }
 
 .burger:hover span {
-    background-color: #BC8C12;
+    background-color: #D0A930;
+    /* золотистая подсветка полосок */
 }
+
+
 
 /* mobile menu */
 /* Мобильное меню скрыто по умолчанию */
