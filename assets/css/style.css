@@ -793,3 +793,120 @@ h2.schedule__title {
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.7);
 }
+
+/* 20250929 start galery */
+/* Секция Недільна школа */
+.school {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.school__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1B365D;
+}
+
+.school__subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.school__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.school__program {
+    flex: 1;
+    text-align: left;
+}
+
+.school__program-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #BC8C12;
+}
+
+.school__list {
+    list-style: disc inside;
+    color: #333;
+    line-height: 1.6;
+}
+
+.school__image-wrap {
+    flex: 1;
+    text-align: center;
+}
+
+.school__image {
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.school__image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Галерея */
+.gallery {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.gallery__img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery__close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.gallery__prev,
+.gallery__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.gallery__prev {
+    left: -60px;
+}
+
+.gallery__next {
+    right: -60px;
+}
